@@ -1,3 +1,3 @@
-import { showAlert } from "./sub";
+import { slickSlider } from "./slick";
 
-showAlert();
+slickSlider();

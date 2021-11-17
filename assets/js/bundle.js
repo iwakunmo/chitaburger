@@ -1,0 +1,1 @@
+!function(){"use strict";$(".slick-slider").slick({autoplay:!0,arrows:!1,fade:!0,speed:1e3,infinite:!0})}();
