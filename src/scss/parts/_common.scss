@@ -1,5 +1,17 @@
 @use "../breakpoints/breakpoints";
 
+@font-face {
+	font-family: 'NotoSansJP';
+	src: url('../font/NotoSansReg.woff') format('woff');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'NotoSansJP';
+  src: url('../font/NotoSansBold.woff') format('woff');
+	font-weight: 700;
+}
+
 /*---------------------------------------
 -----------------------------------------
 *font-size*
@@ -61,13 +73,9 @@ h4{
 -----------------------------------------
 ---------------------------------------*/
 
-.gen__inner{
+.gen-inner{
 	max-width: 1080px;
 	margin: 0 auto;
-
-	@include breakpoints.mq('tab'){
-		text-align: center;
-	}
 }
 
 /*---------------------------------------
@@ -76,15 +84,24 @@ h4{
 -----------------------------------------
 ---------------------------------------*/
 
-.btn__wrap{
+.btn-wrap{
 	text-align: center;
-	margin-top: 8rem;
+	margin-top: 6rem;
 }
 
 .btn{
 	display: inline-block;
-	padding: 2rem 8rem;
 	color: #111;
-	position: relative;
-	min-width: 300px;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+/*---------------------------------------
+-----------------------------------------
+other
+-----------------------------------------
+---------------------------------------*/
+
+body{
+	font-family: 'NotoSansJP' sans-serif;
 }
