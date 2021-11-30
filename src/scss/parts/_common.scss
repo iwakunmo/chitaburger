@@ -14,6 +14,44 @@
 
 /*---------------------------------------
 -----------------------------------------
+表示切り替え
+-----------------------------------------
+---------------------------------------*/
+
+.pc-only{
+	display: block;
+
+	@include breakpoints.mq('tab'){
+		display: none;
+	}
+}
+
+.mid-over{
+	display: block;
+
+	@include breakpoints.mq(){
+		display: none;
+	}
+}
+
+.mid-less{
+	display: none;
+
+	@include breakpoints.mq('tab'){
+		display: block;
+	}
+}
+
+.sp-only{
+	display: none;
+
+	@include breakpoints.mq(){
+		display: block;
+	}
+}
+
+/*---------------------------------------
+-----------------------------------------
 *font-size*
 -----------------------------------------
 ---------------------------------------*/
@@ -76,6 +114,10 @@ h4{
 .gen-inner{
 	max-width: 1080px;
 	margin: 0 auto;
+
+	@include breakpoints.mq('tab'){
+		width: 95%;
+	}
 }
 
 /*---------------------------------------

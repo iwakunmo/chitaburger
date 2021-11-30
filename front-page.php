@@ -1,66 +1,29 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<title></title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-	<link rel="stylesheet" href="./assets/css/slick.css">
-	<link rel="stylesheet" href="./assets/css/ress.css">
-	<link rel="stylesheet" href="./assets/css/style.min.css">
-</head>
-<body>
+	<?php get_header(); ?>
 
-	<!-- header -->
-	<header class="header" id="header">
-		<div class="gen-inner">
-			<nav class="header__menu">
-				<ul>
-					<li><a href="">HOME</a></li>
-					<li><a href="">MENU</a></li>
-					<li><a href="">GALLERY</a></li>
-					<li><a href="">NEWS</a></li>
-					<li><a href="">LOCATION</a></li>
-					<li><a class="inpage-link--sns" href="">SNS</a></li>
-				</ul>
-			</nav>
-			<div class="hamburger">
-				<div class="hamburger-line first"></div>
-				<div class="hamburger-line second"></div>
-				<div class="hamburger-line third"></div>
-			</div>
-		</div>
-	</header>
-	<!-- /header -->
 
 	<!-- mv -->
 	<div class="mv">
 		<div class="mv__slick">
 			<ul class="slick-slider">
-				<li><img src="./assets/img/mv1.jpg" alt=""></li>
-				<li><img src="./assets/img/mv2.jpg" alt=""></li>
-				<li><img src="./assets/img/mv3.jpg" alt=""></li>
+				<li><img src="<?php echo get_template_directory_uri()?>/assets/img/mv1.jpg" alt=""></li>
+				<li><img src="<?php echo get_template_directory_uri()?>/assets/img/mv2.jpg" alt=""></li>
+				<li><img src="<?php echo get_template_directory_uri()?>/assets/img/mv3.jpg" alt=""></li>
 			</ul>
 		</div>
 		<div class="logo">
-			<img src="./assets/img/logo2.png" alt="chitaburger">
+			<img src="<?php echo get_template_directory_uri()?>/assets/img/logo2.png" alt="chitaburger">
 		</div>
 	</div>
 	<!-- /mv -->
 
 	<!-- main -->
 	<main>
-		
+
 		<!-- news -->
 		<section id="news" class="news">
 			<div class="gen-inner">
 				<div class="section__title">
-					<h2><img src="./assets/img/news.png" alt="NEWS"></h2>
+					<h2><img src="<?php echo get_template_directory_uri()?>/assets/img/news.png" alt="NEWS"></h2>
 				</div>
 				<div class="section__content">
 					<div class="news__wrap">
@@ -99,7 +62,7 @@
 						</div>
 					</div>
 					<div class="btn-wrap">
-						<a class="btn" href=""><img src="./assets/img/btn.png" alt="MORE"></a>
+						<a class="btn" href=""><img src="<?php echo get_template_directory_uri()?>/assets/img/btn.png" alt="MORE"></a>
 					</div>
 				</div>
 			</div>
@@ -110,7 +73,7 @@
 		<section id="concept" class="concept">
 			<div class="gen-inner">
 				<div class="section__title">
-					<h2><img src="./assets/img/concept.png" alt="CONCEPT"></h2>
+					<h2><img src="<?php echo get_template_directory_uri()?>/assets/img/concept.png" alt="CONCEPT"></h2>
 				</div>
 				<div class="section__content">
 					<div class="concept__wrap">
@@ -137,7 +100,7 @@
 		<section id="menu" class="menu">
 			<div class="gen-inner">
 				<div class="section__title">
-					<h2><img src="./assets/img/menu.png" alt="MENU"></h2>
+					<h2><img src="<?php echo get_template_directory_uri()?>/assets/img/menu.png" alt="MENU"></h2>
 				</div>
 				<div class="section__content">
 					<div class="menu__wrap">
@@ -146,7 +109,7 @@
 								<p>FOOD</p>
 							</a>
 							<div class="img-box menu__img img--burger">
-								<img src="./assets/img/burger.png" alt="">
+								<img src="<?php echo get_template_directory_uri()?>/assets/img/burger.png" alt="">
 							</div>
 						</div>
 						<div class="menu__link__wrap">
@@ -154,11 +117,11 @@
 								<p>DRINK</p>
 							</a>
 							<div class="img-box menu__img">
-								<img src="./assets/img/drink.png" alt="">
+								<img src="<?php echo get_template_directory_uri()?>/assets/img/drink.png" alt="">
 							</div>
 						</div>
 						<div class="img-box tac img--paper">
-							<img src="./assets/img/paper.png" alt="">
+							<img src="<?php echo get_template_directory_uri()?>/assets/img/paper.png" alt="">
 						</div>
 					</div>
 				</div>
@@ -170,12 +133,12 @@
 		<section id="gallery" class="gallery">
 			<div class="gen-inner">
 				<div class="section__title">
-					<h2><img src="./assets/img/gallery.png" alt="GALLERY"></h2>
+					<h2><img src="<?php echo get_template_directory_uri()?>/assets/img/gallery.png" alt="GALLERY"></h2>
 				</div>
 				<div class="section__content">
 					<div class="gallery__wrap">
 						<div class="btn-wrap">
-							<a class="btn" href=""><img src="./assets/img/btn.png" alt="MORE"></a>
+							<a class="btn" href=""><img src="<?php echo get_template_directory_uri()?>/assets/img/btn.png" alt="MORE"></a>
 						</div>
 					</div>
 				</div>
@@ -187,14 +150,14 @@
 		<section id="sns" class="sns">
 			<div class="gen-inner">
 				<div class="section__title">
-					<h2><img src="./assets/img/sns.png" alt="SNS"></h2>
+					<h2><img src="<?php echo get_template_directory_uri()?>/assets/img/sns.png" alt="SNS"></h2>
 				</div>
 				<div class="section__content">
 					<div class="sns__wrap">
 
 						<div class="sns__line">
 							<a href="">
-								<img src="./assets/img/line-banner.png" alt="ラインお友達登録でお得なクーポン券GET">
+								<img src="<?php echo get_template_directory_uri()?>/assets/img/line-banner.png" alt="ラインお友達登録でお得なクーポン券GET">
 							</a>
 						</div>
 					</div>
@@ -207,18 +170,16 @@
 		<section id="location" class="location">
 			<div class="gen-inner">
 				<div class="section__title">
-					<h2><img src="./assets/img/location.png" alt="LOCATION"></h2>
+					<h2><img src="<?php echo get_template_directory_uri()?>/assets/img/location.png" alt="LOCATION"></h2>
 				</div>
 				<div class="section__content">
 					<div class="location__wrap">
 						<div class="location__map">
-							<iframe
-								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104396.0474505352!2d136.856271222154!3d35.14723036603699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003709e107b2365%3A0x2a9622d4e8ceb352!2z5oSb55-l55yM5ZCN5Y-k5bGL5biC!5e0!3m2!1sja!2sjp!4v1637675064873!5m2!1sja!2sjp"
-								width="540" height="420" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104396.0474505352!2d136.856271222154!3d35.14723036603699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003709e107b2365%3A0x2a9622d4e8ceb352!2z5oSb55-l55yM5ZCN5Y-k5bGL5biC!5e0!3m2!1sja!2sjp!4v1637675064873!5m2!1sja!2sjp" width="540" height="420" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 						</div>
 						<div class="location__data">
 							<div class="logo location__logo">
-								<img src="./assets/img/logo2.png" alt="chitaburger ロゴ">
+								<img src="<?php echo get_template_directory_uri()?>/assets/img/logo2.png" alt="chitaburger ロゴ">
 							</div>
 							<div class="location__info">
 								<dl>
@@ -252,37 +213,4 @@
 	</main>
 	<!-- /main -->
 
-	<footer>
-		<div class="gen-inner">
-			<div class="footer__content">
-				<div class="logo footer__logo">
-					<img src="./assets/img/logo-white.png" alt="chitaburger ロゴ">
-				</div>
-				<div class="footer__info">
-					<p>愛知県知多郡1-1-1</p>
-					<p>000-0000-0000</p>
-					<p>chitaburger@sample.com</p>
-				</div>
-			</div>
-			<nav class="footer__menu">
-				<ul>
-					<li><a href="">HOME</a></li>
-					<li><a href="">MENU</a></li>
-					<li><a href="">GALLERY</a></li>
-					<li><a href="">NEWS</a></li>
-					<li><a href="">LOCATION</a></li>
-					<li><a class="inpage-link--sns" href="">SNS</a></li>
-				</ul>
-			</nav>
-		</div>
-	</footer>
-	<div class="copyright">
-		<small>©︎CHITA BURGER</small>
-	</div>
-
-	<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-	integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-	<script src="./assets/js/slick.min.js"></script>
-	<script src="./assets/js/bundle.js"></script>
-</body>
-</html>
+	<?php get_footer() ?>

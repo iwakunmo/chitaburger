@@ -19,13 +19,29 @@ header
     top: 0;
     left: 0;
     z-index: 9999;
+
+    @include breakpoints.mq(){
+        padding: 0.5rem;
+    }
     
     .header__menu{
         text-align: center;
 
+        @include breakpoints.mq(){
+            height: 100vh;
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
         ul{
             display: flex;
             justify-content: center;
+
+            @include breakpoints.mq(){
+                display: block;
+            }
 
             li{
                 margin-left: 4rem;
@@ -44,6 +60,14 @@ header
                 }
             }
         }
+    }
+
+    .hamburger{
+        position: relative;
+        height: 5rem;
+        width: 5rem;
+        margin-left: auto;
+        background-image: url(../img/burger-close.svg);
     }
 }
 
@@ -64,6 +88,12 @@ mv
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    .slick-slide img{
+        object-fit: cover;
+        height: 100vh;
+        width: 100vw;
     }
 }
 
@@ -88,8 +118,16 @@ section
 section{
     padding: 12rem 0;
 
+    @include breakpoints.mq(){
+        padding: 6rem 0;
+    }
+
     .section__title{
         margin-bottom: 12rem;
+
+        @include breakpoints.mq(){
+            margin-bottom: 6rem;
+        }
 
         h2{
             max-width: 500px;
@@ -109,6 +147,10 @@ news
     .news__wrap{
         position: relative;
         padding: 5rem 0;
+
+        @include breakpoints.mq(){
+            padding: 0;
+        }
 
         .news-board--img{
             background-image: url(../img/board.jpg);
@@ -132,11 +174,19 @@ news
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+
+            @include breakpoints.mq(){
+                height: 95%;
+            }
         }
 
         .news__list{
             position: relative;
             padding: 3rem 10rem;
+
+            @include breakpoints.mq(){
+                padding: 4rem 3rem;
+            }
 
             a{
                 display: block;
@@ -148,13 +198,22 @@ news
 
             .news__item{
                 display: flex;
+                flex-wrap: wrap;
                 align-items: center;
                 margin-bottom: 2rem;
+
+                @include breakpoints.mq(){
+                    display: block;
+                }
 
                 .date{
                     font-family: font.$oswald;
                     margin-right: 2rem;
                     font-size: 1.35em;
+
+                    @include breakpoints.mq(){
+                        display: inline-block;
+                    }
                 }
 
                 .cat{
@@ -164,6 +223,9 @@ news
                     color: #fff;
                     padding: 0 2rem;
                     margin-right: 2rem;
+                    @include breakpoints.mq(){
+                        display: inline-block;
+                    }
                 }
 
                 .detail{
@@ -219,6 +281,12 @@ concept
                 left: 15%;
                 z-index: 0;
                 opacity: 0.3;
+
+                @include breakpoints.mq(){
+                    padding-top: 50%;
+                    width: 50%;
+                    left: 0;
+                }
             }
 
             &::after{
@@ -232,6 +300,12 @@ concept
                 right: 15%;
                 opacity: 0.3;
                 z-index: 0;
+
+                @include breakpoints.mq(){
+                    width: 50%;
+                    padding-top: 50%;
+                    right: 0;
+                }
             }
 
             h3{
@@ -264,6 +338,10 @@ menu
             top: 50%;
             left: 0;
             transform: translateY(-50%);
+
+            @include breakpoints.mq(){
+                width: 55%;
+            }
         }
 
         .menu__link--drink + .menu__img{
@@ -271,15 +349,37 @@ menu
             top: 50%;
             right: 0;
             transform: translateY(-50%);
+
+            @include breakpoints.mq(){
+                width: 40%;
+            }
+        }
+
+        .img--burger::before{
+            content: "";
+            background-image: url(../img/d-flug.png);
+            background-size: cover;
+            width: 10%;
+            padding: 20%;
+            position: absolute;
+            top: -33%;
+            left: 10%;
+            z-index: -1;
+            transform: rotateZ(-45deg);
         }
 
         .menu__link{
             display: block;
             background-color: #fff;
             width: 100vw;
+            margin: 0 calc(50% - 50vw);
             height: 300px;
             margin-bottom: 12rem;
             position: relative;
+
+            @include breakpoints.mq(){
+                height: 150px;
+            }
 
             p{
                 position: absolute;
@@ -293,23 +393,73 @@ menu
             
             &.menu__link--food{
                 background-color: color.$red;
-                transform: translateX(-50%);
+                transform: translateX(-35%);
                 text-align: right;
+
+                @include breakpoints.mq(){
+                    transform: translateX(-10%);
+                }
 
                 p{
                     right: 1em;
+
+                    @include breakpoints.mq(){
+                        right: 0.5em;
+                    }
+                }
+
+                .img--burger{
+                    position: relative;
+
+                    &::before{
+                        content: "";
+                        background-image: url(../img/d-flug.png);
+                        background-size: cover;
+                        width: 100px;
+                        height: 100px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 1;
+                    }
                 }
             }
     
             &.menu__link--drink{
                 background-color: color.$blue;
-                transform: translateX(25%);
+                transform: translateX(35%);
+
+                @include breakpoints.mq(){
+                    transform: translateX(10%);
+                }
 
                 p{
                     left: 1em;
+
+                    @include breakpoints.mq(){
+                        left: 0.5em;
+                    }
                 }
             }
 
+        }
+
+    }
+    .img--paper{
+        position: relative;
+        z-index: 1;
+
+        &::before{
+            content: "";
+            background-image: url(../img/d-obj.png);
+            background-size: cover;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            bottom: 5%;
+            right: -13%;
+            z-index: -1;
+            transform: rotateZ(30deg);
         }
     }
     
@@ -320,6 +470,27 @@ menu
 gallery
 -----------------------------------------
 ---------------------------------------*/
+
+.gallery{
+
+    .gallery__wrap{
+        position: relative;
+
+        &::before{
+            content: "";
+            background-image: url(../img/d-burger.png);
+            background-size: contain;
+            background-position: center;
+            width: 50%;
+            padding-top: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.1;
+        }
+    }
+}
 
 /*---------------------------------------
 -----------------------------------------
@@ -335,6 +506,10 @@ sns
             display: block;
             width: 30%;
             margin: 0 auto;
+
+            @include breakpoints.mq(){
+                width: 100%;
+            }
         }
     }
 }
@@ -351,11 +526,39 @@ location
     .location__wrap{
         display: flex;
         gap: 2rem;
+
+        @include breakpoints.mq(){
+            display: block;
+        }
+    }
+
+    .location__map{
+        position: relative;
+        width: 45%;
+        padding-top: 45%;
+
+        @include breakpoints.mq(){
+            width: 100%;
+            padding-top: 100%;
+            margin-bottom: 2rem;
+        }
+
+        iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     }
 
     .location__data{
         flex: 1;
         width: 45%;
+
+        @include breakpoints.mq(){
+            width: 100%;
+        }
 
         .logo{
             width: 150px;
@@ -367,6 +570,20 @@ location
             padding: 2rem;
             border-top: 1px solid color.$black;
             border-bottom: 1px solid color.$black;
+            position: relative;
+
+            &::before{
+                content: "";
+                background-image: url(../img/d-iron.png);
+                background-size: cover;
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0.1;
+            }
 
             dl{
                 display: flex;
@@ -387,20 +604,37 @@ footer
 footer{
     background-color: color.$brawn;
     padding: 6rem;
+
+    @include breakpoints.mq(){
+        padding: 2rem;
+    }
     
     .footer__content{
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
         color: #fff;
         margin-bottom: 6rem;
 
+        @include breakpoints.mq(){
+            justify-content: center;
+        }
+
         .logo{
             width: 150px;
+
+            @include breakpoints.mq(){
+                margin-bottom: 2rem;
+            }
         }
 
         .footer__info{
             text-align: right;
+
+            @include breakpoints.mq(){
+                text-align: center;
+            }
         }
     }
 
@@ -410,10 +644,19 @@ footer{
             display: flex;
             justify-content: center;
 
+            @include breakpoints.mq(){
+                display: block;
+                text-align: center;
+            }
+
             li{
                 margin-right: 4rem;
 
                 &:last-child{
+                    margin-right: 0;
+                }
+
+                @include breakpoints.mq(){
                     margin-right: 0;
                 }
 

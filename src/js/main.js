@@ -1,3 +1,2 @@
-import { slickSlider } from "./slick";
-
-slickSlider();
+import { hamburgerMenu } from "./hambueger";
+hamburgerMenu();
