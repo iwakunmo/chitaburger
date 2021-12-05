@@ -5,13 +5,13 @@
 	<div class="mv">
 		<div class="mv__slick">
 			<ul class="slick-slider">
-				<li><img src="<?php echo get_template_directory_uri()?>/assets/img/mv1.jpg" alt=""></li>
-				<li><img src="<?php echo get_template_directory_uri()?>/assets/img/mv2.jpg" alt=""></li>
-				<li><img src="<?php echo get_template_directory_uri()?>/assets/img/mv3.jpg" alt=""></li>
+				<li><img src="<?php echo get_template_directory_uri() ?>/assets/img/mv1.jpg" alt=""></li>
+				<li><img src="<?php echo get_template_directory_uri() ?>/assets/img/mv2.jpg" alt=""></li>
+				<li><img src="<?php echo get_template_directory_uri() ?>/assets/img/mv3.jpg" alt=""></li>
 			</ul>
 		</div>
 		<div class="logo">
-			<img src="<?php echo get_template_directory_uri()?>/assets/img/logo2.png" alt="chitaburger">
+			<img src="<?php echo get_template_directory_uri() ?>/assets/img/logo2.png" alt="chitaburger">
 		</div>
 	</div>
 	<!-- /mv -->
@@ -23,7 +23,7 @@
 		<section id="news" class="news">
 			<div class="gen-inner">
 				<div class="section__title">
-					<h2><img src="<?php echo get_template_directory_uri()?>/assets/img/news.png" alt="NEWS"></h2>
+					<h2><img src="<?php echo get_template_directory_uri() ?>/assets/img/news.png" alt="NEWS"></h2>
 				</div>
 				<div class="section__content">
 					<div class="news__wrap">
@@ -62,7 +62,7 @@
 						</div>
 					</div>
 					<div class="btn-wrap">
-						<a class="btn" href=""><img src="<?php echo get_template_directory_uri()?>/assets/img/btn.png" alt="MORE"></a>
+						<a class="btn" href=""><img src="<?php echo get_template_directory_uri() ?>/assets/img/btn.png" alt="MORE"></a>
 					</div>
 				</div>
 			</div>
@@ -73,7 +73,7 @@
 		<section id="concept" class="concept">
 			<div class="gen-inner">
 				<div class="section__title">
-					<h2><img src="<?php echo get_template_directory_uri()?>/assets/img/concept.png" alt="CONCEPT"></h2>
+					<h2><img src="<?php echo get_template_directory_uri() ?>/assets/img/concept.png" alt="CONCEPT"></h2>
 				</div>
 				<div class="section__content">
 					<div class="concept__wrap">
@@ -100,7 +100,7 @@
 		<section id="menu" class="menu">
 			<div class="gen-inner">
 				<div class="section__title">
-					<h2><img src="<?php echo get_template_directory_uri()?>/assets/img/menu.png" alt="MENU"></h2>
+					<h2><img src="<?php echo get_template_directory_uri() ?>/assets/img/menu.png" alt="MENU"></h2>
 				</div>
 				<div class="section__content">
 					<div class="menu__wrap">
@@ -109,7 +109,7 @@
 								<p>FOOD</p>
 							</a>
 							<div class="img-box menu__img img--burger">
-								<img src="<?php echo get_template_directory_uri()?>/assets/img/burger.png" alt="">
+								<img src="<?php echo get_template_directory_uri() ?>/assets/img/burger-3.png" alt="">
 							</div>
 						</div>
 						<div class="menu__link__wrap">
@@ -117,12 +117,18 @@
 								<p>DRINK</p>
 							</a>
 							<div class="img-box menu__img">
-								<img src="<?php echo get_template_directory_uri()?>/assets/img/drink.png" alt="">
+								<img src="<?php echo get_template_directory_uri() ?>/assets/img/drink.png" alt="">
 							</div>
 						</div>
 						<div class="img-box tac img--paper">
-							<img src="<?php echo get_template_directory_uri()?>/assets/img/paper.png" alt="">
+							<button class="mdl__btn js-mdl__btn">
+								<img src="<?php echo get_template_directory_uri() ?>/assets/img/paper.png" alt="">
+							</button>
+							<div class="mdl js-mdl">
+								<img src="<?php echo get_template_directory_uri() ?>/assets/img/paper.png" alt="">
+							</div>
 						</div>
+						<p>クリックで拡大</p>
 					</div>
 				</div>
 			</div>
@@ -133,12 +139,12 @@
 		<section id="gallery" class="gallery">
 			<div class="gen-inner">
 				<div class="section__title">
-					<h2><img src="<?php echo get_template_directory_uri()?>/assets/img/gallery.png" alt="GALLERY"></h2>
+					<h2><img src="<?php echo get_template_directory_uri() ?>/assets/img/gallery.png" alt="GALLERY"></h2>
 				</div>
 				<div class="section__content">
 					<div class="gallery__wrap">
 						<div class="btn-wrap">
-							<a class="btn" href=""><img src="<?php echo get_template_directory_uri()?>/assets/img/btn.png" alt="MORE"></a>
+							<a class="btn" href=""><img src="<?php echo get_template_directory_uri() ?>/assets/img/btn.png" alt="MORE"></a>
 						</div>
 					</div>
 				</div>
@@ -150,14 +156,14 @@
 		<section id="sns" class="sns">
 			<div class="gen-inner">
 				<div class="section__title">
-					<h2><img src="<?php echo get_template_directory_uri()?>/assets/img/sns.png" alt="SNS"></h2>
+					<h2><img src="<?php echo get_template_directory_uri() ?>/assets/img/sns.png" alt="SNS"></h2>
 				</div>
 				<div class="section__content">
 					<div class="sns__wrap">
 
 						<div class="sns__line">
 							<a href="">
-								<img src="<?php echo get_template_directory_uri()?>/assets/img/line-banner.png" alt="ラインお友達登録でお得なクーポン券GET">
+								<img src="<?php echo get_template_directory_uri() ?>/assets/img/line-banner.png" alt="ラインお友達登録でお得なクーポン券GET">
 							</a>
 						</div>
 					</div>
@@ -170,7 +176,7 @@
 		<section id="location" class="location">
 			<div class="gen-inner">
 				<div class="section__title">
-					<h2><img src="<?php echo get_template_directory_uri()?>/assets/img/location.png" alt="LOCATION"></h2>
+					<h2><img src="<?php echo get_template_directory_uri() ?>/assets/img/location.png" alt="LOCATION"></h2>
 				</div>
 				<div class="section__content">
 					<div class="location__wrap">
@@ -179,7 +185,7 @@
 						</div>
 						<div class="location__data">
 							<div class="logo location__logo">
-								<img src="<?php echo get_template_directory_uri()?>/assets/img/logo2.png" alt="chitaburger ロゴ">
+								<img src="<?php echo get_template_directory_uri() ?>/assets/img/logo2.png" alt="chitaburger ロゴ">
 							</div>
 							<div class="location__info">
 								<dl>
