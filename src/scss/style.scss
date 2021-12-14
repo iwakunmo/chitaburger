@@ -4,7 +4,7 @@
 @use "parts/common";
 @use "color/color";
 @use "font/font";
-
+@use "sub";
 
 /*---------------------------------------
 -----------------------------------------
@@ -22,6 +22,28 @@ header
 
     @include breakpoints.mq(){
         padding: 0.5rem;
+    }
+
+    &.is-change{
+        .header__menu{
+            ul{
+                li{
+                    a{
+                        color: color.$black;
+
+                        @include breakpoints.mq(){
+                            color: #fff;
+                        }
+                    }
+
+                    .inpage-link--sns{
+                        background-color: color.$black;
+                        color: #fff;
+                        padding: 0.1rem 2rem;
+                    }
+                }
+            }
+        }
     }
     
     .header__menu{
@@ -110,6 +132,7 @@ header
                     font-weight: bold;
                     font-size: 1.35em;
                     color: #fff;
+                    transition: color 0.3s ease 0s;
                 }
 
                 .inpage-link--sns{
@@ -129,6 +152,16 @@ header
         background-image: url(../img/burger-close-white.svg);
         transition: all 0.3s ease 0s;
         animation: fadeOut 0.3s ease;
+
+        &.is-open{
+            background-image: url(../img/burger-open-white.svg);
+            transition: all 0.3s ease 0s;
+            animation: fadeIn 0.3s ease;
+        }
+    }
+
+    &.is-change .hamburger{
+        background-image: url(../img/burger-close.svg);
 
         &.is-open{
             background-image: url(../img/burger-open-white.svg);
@@ -166,11 +199,11 @@ mv
 
 /*---------------------------------------
 -----------------------------------------
-main
+body
 -----------------------------------------
 ---------------------------------------*/
 
-main{
+body{
     background-image: url(../img/bg-paper.png);
     background-repeat: repeat-y;
     background-size: cover;
@@ -191,14 +224,17 @@ section{
 
     .section__title{
         margin-bottom: 12rem;
+        text-align: center;
 
         @include breakpoints.mq(){
             margin-bottom: 6rem;
         }
 
         h2{
-            max-width: 500px;
-            margin: 0 auto;
+            img{
+                max-width: 500px;
+                margin: 0 auto;
+            }
         }
     }
 }
@@ -554,7 +590,15 @@ menu
                 position: absolute;
                 top: 50%;
                 left: 40%;
-                transform: translateY(-50%) scale(1.7);
+                transform: translateY(-50%) scale(1.8);
+            }
+        }
+
+        .mdl__btn{
+            pointer-events: none;
+
+            @include breakpoints.mq(){
+                pointer-events: visible;
             }
         }
     }

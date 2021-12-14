@@ -1,5 +1,8 @@
-import { hamburgerMenu } from "./hambueger";
+import { hamburgerMenu } from './script';
 hamburgerMenu();
 
-import { modal } from "./modal";
+import { modal } from './script';
 modal();
+
+import { headerColor } from './script';
+headerColor();

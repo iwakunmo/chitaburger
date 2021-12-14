@@ -9,24 +9,23 @@
     <title></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Rye&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <?php wp_head() ?>
 </head>
 
 <body>
-
     <!-- header -->
     <header class="header" id="header">
         <div class="gen-inner">
             <nav class="header__menu">
                 <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">MENU</a></li>
-                    <li><a href="">GALLERY</a></li>
-                    <li><a href="">NEWS</a></li>
-                    <li><a href="">LOCATION</a></li>
-                    <li><a class="inpage-link--sns" href="">SNS</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/')) ?>">HOME</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/menu/')) ?>">MENU</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/gallery/')) ?>">GALLERY</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/news/')) ?>">NEWS</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/location/')) ?>">LOCATION</a></li>
+                    <li><a class="inpage-link--sns" href="<?php echo esc_url(home_url('#sns')) ?>">SNS</a></li>
                 </ul>
             </nav>
             <div class="hamburger sp-only">
