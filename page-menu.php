@@ -2,7 +2,7 @@
 
 <div class="sub-page js-judge-page">
     <div class="js-mv mv--sub">
-        <div class="mv--sub__title">
+        <div class="mv__title--sub">
             <h2><img src="<?php echo get_template_directory_uri() ?>/assets/img/menu.png" alt=""></h2>
         </div>
     </div>
@@ -233,7 +233,7 @@
                         <!-- メニュー一覧 -->
                         <li>
                             <div class="menu__name--sub">
-                                <span class="en">Street Tea /</span>
+                                <span class="en">Straight Tea /</span>
                                 <span class="ja">紅茶</span>
                             </div>
                             <div class="menu__price--sub">

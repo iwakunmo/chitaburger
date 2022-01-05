@@ -12,21 +12,10 @@ sub-page
 ---------------------------------------*/
 
 .mv--sub{
-    background-color: color.$brawn;
-    .mv--sub__title{
-        // border-top: 10px solid #fff;
-        // border-bottom: 10px solid #fff;
+    background: linear-gradient(90deg, rgba(50,12,10,1) 0%, rgba(63,15,13,1) 50%, rgba(50,12,10,1) 100%);
+    .mv__title--sub{
         position: relative;
 
-        &::before{
-            content: "";
-            width: 100%;
-            height: 10px;
-            background: repeating-linear-gradient(45deg, #fff, #fff 5px, transparent 5px, transparent 10px);
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
         &::after{
             content: "";
             width: 100%;
@@ -37,11 +26,15 @@ sub-page
             left: 0;
         }
         h2{
-            height: 300px;
+            height: 350px;
             max-width: 500px;
             margin: 0 auto;
             display: flex;
             align-items: center;
+
+            img{
+                filter: drop-shadow(2px 2px 4px #130000);
+            }
         }
     }
 }
@@ -49,6 +42,10 @@ sub-page
 .sub-page{
     section{
         padding: 6rem 0;
+
+        @include breakpoints.mq(){
+            padding: 3rem 0;
+        }
     }
     .section__title{
         text-align: center;
@@ -125,8 +122,13 @@ menu-page
         grid-template-columns: 1fr 1fr;
         column-gap: 2em;
 
+        @include breakpoints.mq(){
+            grid-template-columns: 1fr;
+        }
+
         li{
             display: flex;
+            gap: 1em;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 2em;
@@ -137,11 +139,209 @@ menu-page
             .en{
                 font-size: 1.5em;
                 font-family: font.$oswald;
+
+                @include breakpoints.mq(){
+                    font-size: 1.3em;
+                }
             }
         }
         .menu__price--sub{
             font-family: font.$oswald;
             font-size: 1.5em;
+
+            @include breakpoints.mq(){
+                font-size: 1.3em;
+            }
         }
     }
+}
+
+/*---------------------------------------
+-----------------------------------------
+news-page
+-----------------------------------------
+---------------------------------------*/
+
+.news--sub{
+
+    .archive__item--sub{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        @include breakpoints.mq(){
+            display: block;
+        }
+
+        .date{
+                    font-family: font.$oswald;
+                    margin-right: 2rem;
+                    font-size: 1.35em;
+
+                    @include breakpoints.mq(){
+                        display: inline-block;
+                    }
+                }
+
+                .cat{
+                    font-family: font.$oswald;
+                    font-weight: bold;
+                    background-color: color.$brawn;
+                    color: #fff;
+                    padding: 0 2rem;
+                    margin-right: 2rem;
+                    @include breakpoints.mq(){
+                        display: inline-block;
+                    }
+                }
+
+                .detail{
+                    font-weight: bold;
+                    border-bottom: 1px solid color.$red;
+                    flex: 1;
+                    position: relative;
+
+                    @include breakpoints.mq(){
+                        margin-top: 0.3em;
+                    }
+
+                    &:before{
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 10px 0 0 10px;
+                        border-color: transparent transparent transparent color.$red;
+                        position: absolute;
+                        bottom: -1px;
+                        right: 0;
+                    }
+                }
+    }
+}
+
+/*---------------------------------------
+-----------------------------------------
+location-page
+-----------------------------------------
+---------------------------------------*/
+
+.location--sub{
+
+    .info--sub{
+
+        .info__wrap{
+            background-color: #fff;
+            padding: 4rem 2rem;
+            border: 3px solid color.$brawn;
+            width: 70%;
+            margin: 0 auto;
+
+            @include breakpoints.mq(){
+                width: 100%;
+            }
+
+            dl{
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+                border-bottom: 1px solid color.$brawn;
+                padding-left: 1em;
+                margin-bottom: 2em;
+
+                @include breakpoints.mq(){
+                    display: block;
+                }
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                
+                dt{
+                    width: 40%;
+
+                    @include breakpoints.mq(){
+                        width: 100%;
+                        margin-bottom: 0.3em;
+                    }
+                }
+                dd{
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    .map--sub{
+        text-align: center;
+
+        .map__wrap{
+            margin-bottom: 1rem;
+        }
+        
+        .map__text{
+            text-align: left;
+        }
+
+    }
+}
+
+/*---------------------------------------
+-----------------------------------------
+article
+-----------------------------------------
+---------------------------------------*/
+
+.article{
+    padding: 10rem 0;
+
+    .article__content{
+        .article__title{
+            margin-bottom: 6rem;
+
+            h2{
+                border-bottom: 3px solid color.$brawn;
+            }
+            .date{
+                display: block;
+                text-align: right;
+            }
+        }
+    }
+
+    .article__main{
+        margin-bottom: 6rem;
+    }
+
+    .article__sns{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+
+        @include breakpoints.mq(){
+            grid-template-columns: 1fr;
+        }
+
+        .banner{
+            color: #fff;
+            text-align: center;
+            font-size: 2.4rem;
+            font-weight: bold;
+            padding: 2rem 0;
+    
+            &.banner--line{
+                background-color: #06c755;
+            }
+
+            &.banner--insta{
+                background-color: #CF2E92;
+            }
+
+            &.banner--twitter{
+                background-color: #1DA1F2;
+            }
+        }
+    }
+
 }

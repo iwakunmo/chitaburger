@@ -3,8 +3,11 @@ function slickSlider() {
 		autoplay: true,
 		arrows: false,
 		fade: true,
-		speed: 1000,
+		speed: 1500,
 		infinite: true,
+		pauseOnFocus: false,
+		pauseOnHover: false,
+		pauseOnDotsHover: false
 	});
 }
 

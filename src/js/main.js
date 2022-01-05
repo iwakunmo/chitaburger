@@ -6,3 +6,6 @@ modal();
 
 import { headerColor } from './script';
 headerColor();
+
+import { fixMediaQuery } from './script';
+fixMediaQuery();

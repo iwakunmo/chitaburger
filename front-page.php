@@ -30,39 +30,29 @@
 							<div class="news-board--img"></div>
 							<div class="news-paper--img"></div>
 							<div class="news__list">
-
-								<a href="">
-									<dl class="news__item">
-										<dt class="date">2021/10/31</dt>
-										<dd class="cat">NEWS</dd>
-										<dd class="detail">お知らせ内容</dd>
-									</dl>
-								</a>
-								<dl class="news__item">
-									<dt class="date">2021/10/31</dt>
-									<dd class="cat">NEWS</dd>
-									<dd class="detail">お知らせ内容</dd>
-								</dl>
-								<dl class="news__item">
-									<dt class="date">2021/10/31</dt>
-									<dd class="cat">NEWS</dd>
-									<dd class="detail">お知らせ内容</dd>
-								</dl>
-								<dl class="news__item">
-									<dt class="date">2021/10/31</dt>
-									<dd class="cat">NEWS</dd>
-									<dd class="detail">お知らせ内容</dd>
-								</dl>
-								<dl class="news__item">
-									<dt class="date">2021/10/31</dt>
-									<dd class="cat">NEWS</dd>
-									<dd class="detail">お知らせ内容</dd>
-								</dl>
-
+								<?php
+								if (have_posts()) :
+									while (have_posts()) :
+										the_post();
+								?>
+										<a href="<?php the_permalink() ?>">
+											<dl class="news__item">
+												<dt class="date"><?php the_time('Y-m-d') ?></dt>
+												<dd class="cat"><?php $cat = get_the_category();
+																$cat = $cat[0]; {
+																	echo $cat->cat_name;
+																} ?></dd>
+												<dd class="detail"><?php the_title() ?></dd>
+											</dl>
+										</a>
+								<?php
+									endwhile;
+								endif;
+								?>
 							</div>
 						</div>
 						<div class="btn-wrap">
-							<a class="btn" href=""><img src="<?php echo get_template_directory_uri() ?>/assets/img/btn.png" alt="MORE"></a>
+							<a class="btn" href="<?php echo esc_url(home_url('/news/')) ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/img/btn.png" alt="MORE"></a>
 						</div>
 					</div>
 				</div>
@@ -78,7 +68,11 @@
 					<div class="section__content">
 						<div class="concept__wrap">
 							<div class="concept__heading">
-								<h3>知多牛×アメリカン</h3>
+								<h3>
+									<span class="concept__heading--left">知多牛</span>
+									<span class="concept__heading--center">×</span>
+									<span class="concept__heading--right">アメリカン</span>
+								</h3>
 							</div>
 							<div class="concept__text">
 								<p>
@@ -143,6 +137,9 @@
 					</div>
 					<div class="section__content">
 						<div class="gallery__wrap">
+							<div class="gallery__slider">
+								<?php echo do_shortcode('[instagram-feed]'); ?>
+							</div>
 							<div class="btn-wrap">
 								<a class="btn" href=""><img src="<?php echo get_template_directory_uri() ?>/assets/img/btn.png" alt="MORE"></a>
 							</div>
@@ -160,7 +157,15 @@
 					</div>
 					<div class="section__content">
 						<div class="sns__wrap">
-
+							<div class="sns__timeline">
+								<div class="sns__twitter">
+									<a class="twitter-timeline" data-height="500px" href="https://twitter.com/chita_burger?ref_src=twsrc%5Etfw">Tweets by chita_burger</a>
+									<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+								</div>
+								<div class="sns__insta">
+									<?php echo do_shortcode('[instagram-feed col=1 num=1]'); ?>
+								</div>
+							</div>
 							<div class="sns__line">
 								<a href="">
 									<img src="<?php echo get_template_directory_uri() ?>/assets/img/line-banner.png" alt="ラインお友達登録でお得なクーポン券GET">
@@ -220,4 +225,4 @@
 		<!-- /main -->
 	</div>
 
-		<?php get_footer() ?>
+	<?php get_footer() ?>

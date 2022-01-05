@@ -28,10 +28,15 @@
                     <li><a class="inpage-link--sns" href="<?php echo esc_url(home_url('#sns')) ?>">SNS</a></li>
                 </ul>
             </nav>
-            <div class="hamburger sp-only">
-                <div class="hamburger-line first"></div>
-                <div class="hamburger-line second"></div>
-                <div class="hamburger-line third"></div>
+            <div class="sp-header">
+                <div class="header__logo sp-only">
+                    <h1><a href="<?php echo esc_url(home_url('/')) ?>">CHITA BURGER</a></h1>
+                </div>
+                <div class="hamburger sp-only">
+                    <div class="hamburger-line first"></div>
+                    <div class="hamburger-line second"></div>
+                    <div class="hamburger-line third"></div>
+                </div>
             </div>
         </div>
     </header>
